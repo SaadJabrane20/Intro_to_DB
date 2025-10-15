@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS alx_book_store;
+
 CREATE TABLE Authors(
     author_id INT  PRIMARY KEY,
     author_name VARCHAR(215)
@@ -20,8 +22,8 @@ CREATE TABLE Customers(
 );
 
 CREATE TABLE Orders(
-    order_id INt PRIMARY KEY,
-    customer_id INt,
+    order_id INT PRIMARY KEY,
+    customer_id INT,
     order_date DATE,
     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 );
